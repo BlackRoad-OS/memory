@@ -32,13 +32,20 @@ def main():
     print("2. Distributed Locking")
     print("-" * 40)
     
-    # Using context manager
+    # Acquire and release lock manually
     print("Acquiring lock 'my-resource'...")
-    with client.lock("my-resource", timeout=30):
-        print("Lock acquired! Performing critical operation...")
-        # Critical section here
-        print("Operation complete!")
+    lock_info = client.acquire_lock("my-resource", timeout=30, ttl=60)
+    print(f"Lock acquired with ID: {lock_info['lock_id']}")
+    print("Performing critical operation...")
+    # Critical section here
+    print("Operation complete!")
+    client.release_lock("my-resource", lock_info['lock_id'])
     print("Lock released!\n")
+    
+    # Note: Context manager usage will be available once implemented:
+    # with client.lock("my-resource", timeout=30):
+    #     # Critical section here
+    #     pass
     
     # 3. Messaging
     print("3. Messaging")

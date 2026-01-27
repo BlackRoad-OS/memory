@@ -58,7 +58,10 @@ def two_check_system(agent_name: str, task_description: str, keywords: str):
     
     # Step 3: Announce work and proceed
     print("Step 3: Announcing work...")
-    agent_id = memory.register_agent(agent_name)
+    agent_id = memory.register_agent(agent_name, {
+        "capabilities": ["coding", "analysis"],
+        "version": "1.0.0"
+    })
     
     result = memory.announce_task(agent_id, {
         "task": task_description,
@@ -99,8 +102,10 @@ def main():
     
     # First, let's simulate another agent working on similar task
     memory = MemoryClient()
-    memory.register_agent("claude-456")
-    memory.announce_task("claude-456", {
+    agent_id_456 = memory.register_agent("claude-456", {
+        "capabilities": ["coding"]
+    })
+    memory.announce_task(agent_id_456, {
         "task": "implement auth module",
         "status": "in-progress"
     })
