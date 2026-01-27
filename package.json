@@ -1,0 +1,41 @@
+{
+  "name": "@blackroad/memory",
+  "version": "0.1.0",
+  "description": "Central shared memory and coordination layer for BlackRoad OS",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/",
+    "format": "prettier --write src/"
+  },
+  "keywords": [
+    "blackroad",
+    "memory",
+    "coordination",
+    "distributed-systems",
+    "blackboard-pattern"
+  ],
+  "author": "BlackRoad OS, Inc.",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BlackRoad-OS/memory.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BlackRoad-OS/memory/issues"
+  },
+  "homepage": "https://github.com/BlackRoad-OS/memory#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "nodemon": "^3.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0"
+  }
+}
