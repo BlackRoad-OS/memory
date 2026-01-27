@@ -2,6 +2,9 @@
 BlackRoad Memory Client
 
 Python client library for interacting with the BlackRoad Memory system.
+
+NOTE: This is a skeleton implementation showing the intended API.
+The actual implementation is in progress.
 """
 
 from typing import Any, Dict, List, Optional

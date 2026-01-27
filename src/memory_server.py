@@ -2,6 +2,9 @@
 BlackRoad Memory Server
 
 Core memory service implementation.
+
+NOTE: This is a skeleton implementation showing the intended structure.
+The actual implementation is in progress.
 """
 
 from typing import Dict, Any, Optional

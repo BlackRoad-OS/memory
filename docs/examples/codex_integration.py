@@ -4,6 +4,10 @@ Example: Integration with BlackRoad Codex
 This example demonstrates the Two-Check System:
 1. Check Memory for conflicts
 2. Check Codex for existing code
+
+NOTE: This is an example of the intended API. The actual implementation
+is still in progress. These examples will work once the memory service
+and codex integration are fully implemented.
 """
 
 from src.memory_client import MemoryClient

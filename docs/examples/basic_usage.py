@@ -2,6 +2,10 @@
 Example: Basic Memory Client Usage
 
 This example demonstrates basic usage of the BlackRoad Memory client.
+
+NOTE: This is an example of the intended API. The actual implementation
+is still in progress. These examples will work once the memory service
+is fully implemented.
 """
 
 from src.memory_client import MemoryClient
